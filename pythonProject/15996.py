@@ -1,27 +1,17 @@
 import sys
-import math
-
 input = sys.stdin.readline
-factorial = 1
+cnt = 0
 
 N, A = map(int, input().split())
+X = A
 
-for i in range(1, N + 1):
-    factorial *= i
+while A <= N:
+    cnt += N // A
+    A *= X
+
+print(cnt)
+
+# factorial 인데 불구하고 N 값을 기준으로 2, 2^2, 2^3 순으로 크게 만들면서 N을 넘지 않는지 확인
 
 
-
-
-
-5//2
-count 2
-2 * 2
-5 4
-count 3
-x 4*2
-couny  3
-
-5 4 3 2 1
-
-5
 
