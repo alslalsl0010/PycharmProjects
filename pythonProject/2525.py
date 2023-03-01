@@ -1,9 +1,13 @@
-A, B = input().split()
-C = int(input())
+h, m = map(int, input().split())
+timer = int(input())
 
-if (60 - int(B)) >= C:
-    print(f'{int(A)} {int(B)+C}')
-elif (int(B) + C) == 60:
-    print(f'{int(A) + 1} 0')
-else:
-    print(f'{int(A) + 1} {(C - (60 - int(B)))}')
+h += timer // 60
+m += timer % 60
+
+if m >= 60:
+    m -= 60
+    h += 1
+if h >= 24:
+    h -= 24
+
+print(h,m)
