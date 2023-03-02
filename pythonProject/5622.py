@@ -1,11 +1,11 @@
-s = set(range(1, 10001))
+a_list = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+time = 0
+word = str(input())
 
-for a in range(1, 10001):
-    for b in str(a): # a = '1', '2'. '3', '4'
-        a += int(b) # a = 1234 + 1 + 2 + 3 + 4
-    s.discard(a)
+for i in a_list: #ABC
+    for j in i: #A
+        for k in word:
+            if k == j:
+                time += a_list.index(i) + 3
 
-for num in s:
-    print(num) # set 함수 대괄호와 콤마 없이 출력하기 위함
-
-# set함수, str, int 활용 방법
+print(time)
