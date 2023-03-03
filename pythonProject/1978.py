@@ -1,17 +1,20 @@
-testCase = int(input())
-answer = 0
+def is_Prime(i):
 
-num = list(map(int, input().split()))
-
-for i in num:
     if i == 1:
-        continue
+        return 0
 
     for j in range(2, int(i ** 0.5) + 1):
         if i % j == 0:
-            break
+            return 0
+    return 1
 
-    else:
-        answer += 1
 
-print(answer)
+testCase = int(input())
+cnt = 0
+num = list(map(int, input().split()))
+
+for i in num:
+    if is_Prime(i):
+        cnt += 1
+
+print(cnt)
