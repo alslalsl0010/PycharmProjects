@@ -1,14 +1,18 @@
-n = int(input())
+num = int(input())
 
-group_word = 0
-for _ in range(n):
-    word = input()
+groupWord = 0
+
+for i in range(num):
+    word = str(input())
     error = 0
-    for index in range(len(word)-1):  # 인덱스 범위 생성 : 0부터 단어개수 -1까지
-        if word[index] != word[index+1]:  # 연달은 두 문자가 다른 때,
-            new_word = word[index+1:]  # 현재글자 이후 문자열을 새로운 단어로 생성
-            if new_word.count(word[index]) > 0:  # 남은 문자열에서 현재글자가 있있다면
-                error += 1  # error에 1씩 증가.
+
+    for i in range(len(word) - 1): # word 범위 조심
+        if word[i] != word[i+1]:
+            new_word = word[i+1:]
+            if new_word.count(word[i]) > 0: # 1번지 값은 이미 위에서 비교했으니까 1~ 끝까지 저장 후 맨 첫번쨰랑 비교해서 같은 거 있는지 확인
+                error += 1
     if error == 0:
-        group_word += 1  # error가 0이면 그룹단어
-print(group_word)
+        groupWord += 1
+
+print(groupWord)
+
