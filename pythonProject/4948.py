@@ -1,5 +1,4 @@
 primeNum = list([False] * 246913)  # 0부터 인덱스 생기니까 246912 인덱스 쓰려면 246913개 만들어야 함
-print(primeNum.count(False))
 primeNum[2] = True
 
 for i in range(3, 246913):
