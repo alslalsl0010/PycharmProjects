@@ -1,5 +1,5 @@
 import itertools
-
+import sys
 while True:
 
     array = list(map(int, input().split()))
