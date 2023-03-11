@@ -1,15 +1,16 @@
-import itertools
+from itertools import combinations
 import sys
-while True:
+input = sys.stdin.readline
 
-    array = list(map(int, input().split()))
+while (1):
+    num = list(map(int, input().split()))
 
-    k = array[0]
-    S = array[1:]
+    if 0 in num:
+        break
 
-    for i in itertools.combinations(S, 6):
-        print(*i)
+    num.pop(0)
 
-    if k == 0:
-        exit()
+    for i in combinations(num, 6):
+        print(' '.join(map(str, i)))
+
     print()
