@@ -3,7 +3,7 @@ import sys
 
 def dfs(idx):
     if len(answer) == m:
-        print(' '.join(map(str, answer)))
+        print(*answer)
         return
 
     for i in range(idx, n + 1):
