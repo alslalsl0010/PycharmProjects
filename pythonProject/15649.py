@@ -12,7 +12,8 @@ def dfs():
         if i not in s:
             s.append(i)
             dfs()  # 기점으로 열 원소로 들어감
-            s.pop()
+            s.pop()+
+                                                                       
 
 
 dfs()

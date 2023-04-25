@@ -7,3 +7,5 @@ def factorial(n):
 
 n, m = map(int, input().split())
 print(factorial(n) // factorial(n-m) * factorial(m))
+
+# 꾸준히 진행하자
