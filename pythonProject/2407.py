@@ -6,6 +6,6 @@ def factorial(n):
 
 
 n, m = map(int, input().split())
-print(factorial(n) // factorial(n-m) * factorial(m))
+print(factorial(n) // (factorial(n-m) * factorial(m)))
 
-# 꾸준히 진행하자
+# 계산식 순서 조심하기
